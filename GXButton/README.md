@@ -1,4 +1,4 @@
-# JMButton
+# GXButton
 超强UIButton封装
 * 新增水波纹按钮点击效果
 * 新增倒计时功能
@@ -8,8 +8,7 @@
 * 自定义角标动画
 * 支持CocoaPods
 
-# 一张图让你看懂JMButton结构
-![](https://github.com/JunAILiang/JMAllGif/raw/master/JMButton/JMButtonAll.png)
+
 
 # 版本
 * 2018-01-29 修复按钮倒计时功能
@@ -21,21 +20,6 @@
 # 演示
 ![](https://github.com/JunAILiang/JMAllGif/raw/master/JMButton/JMButton.gif) ![](https://github.com/JunAILiang/JMAllGif/raw/master/JMButton/JMButton1.gif) ![](https://github.com/JunAILiang/JMAllGif/raw/master/JMButton/JMButton2.gif)
 
-# 基本按钮如何使用, 以Bootstrap样式为例
-* 通过CocoaPods导入 `pod 'JMButton', '~> 0.5'`
-* 手动导入 直接下载工程把 `JMButton` 文件夹导入到自己工程中
-1. 导入JMButtons`#import "JMButtons.h"`，
-2. 初始化JMBootstrapButtonConfig并配置属性
-```
-JMBootstrapButtonConfig *buttonConfig = [JMBootstrapButtonConfig buttonConfig];
-buttonConfig.bootstrapType = JMBootstrapTypeDefault;
-```
-3. 初始化JMButton并添加到视图
-```
-JMButton *btn = [[JMButton alloc] initWithFrame:CGRectMake(100, 100, 100, 50) ButtonConfig:buttonConfig];
-[btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-[self.view addSubView:btn];
-```
 
 # 一行代码实现倒计时按钮
 ```
@@ -128,18 +112,4 @@ typedef NS_ENUM(NSInteger, JMNumberButtonType) {
 @property (nonatomic, assign) NSInteger maxNumber;
 ```
 
-# 水波纹按钮如何使用
-1. 导入JMButtons`#import "JMButtons.h"`
-```
-JMWaveButtonConfig *buttonConfig = [JMWaveButtonConfig buttonConfig];
-buttonConfig.highlightedColor = [UIColor redColor];  //水波纹按钮颜色
-buttonConfig.title = @"我是按钮1";
-JMButton *waveBtn = [[JMButton alloc] initWithFrame:CGRectMake(50, 100, 160, 60) ButtonConfig:buttonConfig];
-[self.view addSubview:waveBtn];
-```
 
-
-### 联系我:
-   * qq: 1245424073
-   * [简书地址](https://www.jianshu.com/p/ba8e986cdd0c)
-   * [我的博客](https://ljmvip.cn)
